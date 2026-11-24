@@ -1,0 +1,12 @@
+[M1a] Empty cart, name "Asha Verma", click Place Order
+    -> {"confirmationVisible":false,"confirmationHeadingCount":0,"reference":"","cartError":"Your cart is empty. Add at least one item before placing your order.","nameError":null,"nameValue":"Asha Verma","orderTotal":"$0.00"}
+[M1b] Empty cart, blank name, click Place Order
+    -> {"confirmationVisible":false,"confirmationHeadingCount":0,"reference":"","cartError":"Your cart is empty. Add at least one item before placing your order.","nameError":"Please enter your full name.","nameValue":"","orderTotal":"$0.00"}
+[M1c] Add Pen Set after the error (errors should clear live)
+    -> {"confirmationVisible":false,"confirmationHeadingCount":0,"reference":"","cartError":null,"nameError":null,"nameValue":"Asha Verma","orderTotal":"$4.00"}
+[M1d] Remove the only item again (cart-empty error should return)
+    -> {"confirmationVisible":false,"confirmationHeadingCount":0,"reference":"","cartError":"Your cart is empty. Add at least one item before placing your order.","nameError":null,"nameValue":"Asha Verma","orderTotal":"$0.00"}
+[M2a] Add Notebook, name, then 3 rapid mouse clicks on Place Order
+    -> {"confirmationVisible":true,"confirmationHeadingCount":1,"reference":"ORD-MQ2PCU","cartError":null,"nameError":null,"nameValue":"Asha Verma","orderTotal":"$12.50"}
+[M3] Press Enter in the name field, then Enter twice more
+    -> {"afterFirst":{"confirmationVisible":true,"confirmationHeadingCount":1,"reference":"ORD-J7T7WU","cartError":null,"nameError":null,"nameValue":"Asha Verma","orderTotal":"$12.50"},"afterRepeat":{"confirmationVisible":true,"confirmationHeadingCount":1,"reference":"ORD-J7T7WU","cartError":null,"nameError":null,"nameValue":"Asha Verma","orderTotal":"$12.50"},"referenceUnchanged":true}

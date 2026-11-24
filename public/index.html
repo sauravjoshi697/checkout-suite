@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Mini Checkout</h1>
+
+    <div id="shop">
+      <section aria-labelledby="products-heading">
+        <h2 id="products-heading">Products</h2>
+        <ul id="products" class="products"></ul>
+      </section>
+
+      <form id="checkout-form" novalidate>
+        <section aria-labelledby="cart-heading">
+          <h2 id="cart-heading">Your cart</h2>
+          <p id="empty-cart" data-testid="empty-cart">Your cart is empty. Add a product above.</p>
+
+          <table id="cart-table" data-testid="cart-table" hidden>
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Line total</th>
+                <th scope="col"><span class="visually-hidden">Remove</span></th>
+              </tr>
+            </thead>
+            <tbody id="cart-body"></tbody>
+          </table>
+
+          <p id="cart-error" class="error" role="alert" data-testid="cart-error" hidden></p>
+
+          <p class="total">Order total: <strong id="order-total" data-testid="order-total">$0.00</strong></p>
+        </section>
+
+        <section aria-labelledby="details-heading">
+          <h2 id="details-heading">Your details</h2>
+          <div class="field">
+            <label for="customer-name">Full name <span class="req">(required)</span></label>
+            <input id="customer-name" name="name" type="text" autocomplete="name" maxlength="80"
+                   aria-describedby="name-error">
+            <p id="name-error" class="error" role="alert" data-testid="name-error" hidden></p>
+          </div>
+        </section>
+
+        <button type="submit" id="place-order">Place Order</button>
+      </form>
+    </div>
+
+    <section id="confirmation" data-testid="confirmation" aria-labelledby="confirmation-heading" hidden>
+      <h2 id="confirmation-heading" tabindex="-1">Order confirmed</h2>
+      <p>Thank you, <span id="confirm-name" data-testid="confirmation-name"></span>. Your order has been placed.</p>
+      <p>Reference: <strong id="confirm-ref" data-testid="confirmation-ref"></strong></p>
+      <ul id="confirm-items" data-testid="confirmation-items"></ul>
+      <p>Order total: <strong id="confirm-total" data-testid="confirmation-total"></strong></p>
+      <button type="button" id="new-order">Start new order</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

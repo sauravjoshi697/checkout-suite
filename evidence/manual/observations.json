@@ -1,0 +1,92 @@
+[
+  {
+    "id": "M1a",
+    "step": "Empty cart, name \"Asha Verma\", click Place Order",
+    "observed": {
+      "confirmationVisible": false,
+      "confirmationHeadingCount": 0,
+      "reference": "",
+      "cartError": "Your cart is empty. Add at least one item before placing your order.",
+      "nameError": null,
+      "nameValue": "Asha Verma",
+      "orderTotal": "$0.00"
+    }
+  },
+  {
+    "id": "M1b",
+    "step": "Empty cart, blank name, click Place Order",
+    "observed": {
+      "confirmationVisible": false,
+      "confirmationHeadingCount": 0,
+      "reference": "",
+      "cartError": "Your cart is empty. Add at least one item before placing your order.",
+      "nameError": "Please enter your full name.",
+      "nameValue": "",
+      "orderTotal": "$0.00"
+    }
+  },
+  {
+    "id": "M1c",
+    "step": "Add Pen Set after the error (errors should clear live)",
+    "observed": {
+      "confirmationVisible": false,
+      "confirmationHeadingCount": 0,
+      "reference": "",
+      "cartError": null,
+      "nameError": null,
+      "nameValue": "Asha Verma",
+      "orderTotal": "$4.00"
+    }
+  },
+  {
+    "id": "M1d",
+    "step": "Remove the only item again (cart-empty error should return)",
+    "observed": {
+      "confirmationVisible": false,
+      "confirmationHeadingCount": 0,
+      "reference": "",
+      "cartError": "Your cart is empty. Add at least one item before placing your order.",
+      "nameError": null,
+      "nameValue": "Asha Verma",
+      "orderTotal": "$0.00"
+    }
+  },
+  {
+    "id": "M2a",
+    "step": "Add Notebook, name, then 3 rapid mouse clicks on Place Order",
+    "observed": {
+      "confirmationVisible": true,
+      "confirmationHeadingCount": 1,
+      "reference": "ORD-MQ2PCU",
+      "cartError": null,
+      "nameError": null,
+      "nameValue": "Asha Verma",
+      "orderTotal": "$12.50"
+    }
+  },
+  {
+    "id": "M3",
+    "step": "Press Enter in the name field, then Enter twice more",
+    "observed": {
+      "afterFirst": {
+        "confirmationVisible": true,
+        "confirmationHeadingCount": 1,
+        "reference": "ORD-J7T7WU",
+        "cartError": null,
+        "nameError": null,
+        "nameValue": "Asha Verma",
+        "orderTotal": "$12.50"
+      },
+      "afterRepeat": {
+        "confirmationVisible": true,
+        "confirmationHeadingCount": 1,
+        "reference": "ORD-J7T7WU",
+        "cartError": null,
+        "nameError": null,
+        "nameValue": "Asha Verma",
+        "orderTotal": "$12.50"
+      },
+      "referenceUnchanged": true
+    }
+  }
+]

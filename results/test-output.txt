@@ -1,0 +1,14 @@
+
+Running 9 tests using 1 worker
+
+  ✓  1 tests/checkout.spec.js:11:3 › Required checks › 1. successful checkout produces a confirmation with a reference (766ms)
+  ✓  2 tests/checkout.spec.js:32:3 › Required checks › 2. a missing required field blocks checkout and keeps the cart (720ms)
+  ✓  3 tests/checkout.spec.js:63:3 › Required checks › 3. changing a quantity updates line totals and the order total exactly (753ms)
+  ✓  4 tests/regression.spec.js:11:3 › Regression checks › empty cart blocks checkout and preserves the typed name (425ms)
+  ✓  5 tests/regression.spec.js:22:3 › Regression checks › empty cart and blank name show both problems at once (366ms)
+  ✓  6 tests/regression.spec.js:29:3 › Regression checks › double-clicking Place Order produces one confirmation (500ms)
+  ✓  7 tests/regression.spec.js:40:3 › Regression checks › re-submitting after the order is placed keeps the same single confirmation (484ms)
+  ✓  8 tests/regression.spec.js:59:3 › Regression checks › an invalid typed quantity blocks checkout until fixed (945ms)
+  ✓  9 tests/regression.spec.js:78:3 › Regression checks › Start new order returns to a clean state (518ms)
+
+  9 passed (6.5s)
